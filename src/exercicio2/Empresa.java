@@ -15,7 +15,7 @@ public class Empresa {
 		this.nome = "";
 		this.cnpj = 0;
 		this.nomeRua = "";
-		this.listaFuncionarios = new ArrayList<Funcionario>();
+		this.listaFuncionarios = new ArrayList<>();
 	}
 	
 	//construtores com parametro
@@ -57,6 +57,9 @@ public class Empresa {
 
 	public void setListaFuncionarios(ArrayList<Funcionario> listaFuncionarios) {
 		this.listaFuncionarios = listaFuncionarios;
+	}
+	public void acrescentarFuncionario(Funcionario funcionario) {
+		listaFuncionarios.add(funcionario);
 	}
 	
 }
