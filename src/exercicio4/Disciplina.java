@@ -21,12 +21,12 @@ public class Disciplina {
 	}
 
 	// construtores com parâmetros
-	public Disciplina(String nomeDisciplina, double horasTotais, int avaliacao, ArrayList<Curso> listaCursos, Professor professor) {
+	public Disciplina(String nomeDisciplina, double horasTotais, int avaliacao) {
 		this.nomeDisciplina = nomeDisciplina;
 		this.horasTotais = horasTotais;
 		this.avaliacao = avaliacao;
-		this.listaCursos = listaCursos;
-		this.professor = professor;
+		this.listaCursos = new ArrayList<>();
+		this.professor = new Professor();
 	}
 	// métodos
 
@@ -69,5 +69,4 @@ public class Disciplina {
 	public void setProfessor(Professor professor) {
 		this.professor = professor;
 	}
-	
 }

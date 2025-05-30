@@ -18,11 +18,11 @@ public class Curso {
 		this.listaDisciplinas = new ArrayList<>();
 	}
 	// construtores com parâmetros
-	public Curso(String nomeCurso, int quantidadeAlunos, String local, ArrayList<Disciplina> listaDisciplinas) {
+	public Curso(String nomeCurso, int quantidadeAlunos, String local) {
 		this.nomeCurso = nomeCurso;
 		this.quantidadeAlunos = quantidadeAlunos;
 		this.local = local;
-		this.listaDisciplinas = listaDisciplinas;
+		this.listaDisciplinas = new ArrayList<>();
 	}
 	// métodos
 	public String getNomeCurso() {
@@ -49,5 +49,19 @@ public class Curso {
 	public void setListaDisciplinas(ArrayList<Disciplina> listaDisciplinas) {
 		this.listaDisciplinas = listaDisciplinas;
 	}
-	
+	//adiciona uma disciplina ao curso
+	public void adicionarDisciplina(Disciplina disciplina) {
+		listaDisciplinas.add(disciplina);
+	}
+	public void listarDisciplinas() {
+		System.out.printf("As disciplinas do curso são: \n");
+		for (Disciplina disciplina : listaDisciplinas) {
+			System.out.println(" Nome da disciplina: " + disciplina.getNomeDisciplina() + " | Professor: " + disciplina.getProfessor().getNome());
+		}
+	}
+	public void imprimirDados() {
+		System.out.println("Nome do curso: " + nomeCurso );
+		listarDisciplinas();
+		
+	}
 }

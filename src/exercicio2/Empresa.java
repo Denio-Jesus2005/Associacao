@@ -4,29 +4,29 @@ import java.util.ArrayList;
 
 public class Empresa {
 
-	//atributos
+	// atributos
 	private String nome;
 	private int cnpj;
 	private String nomeRua;
 	private ArrayList<Funcionario> listaFuncionarios;
-	
-	//construtores sem parâmetro
+
+	// construtores sem parâmetro
 	public Empresa() {
 		this.nome = "";
 		this.cnpj = 0;
 		this.nomeRua = "";
 		this.listaFuncionarios = new ArrayList<>();
 	}
-	
-	//construtores com parametro
+
+	// construtores com parametro
 	public Empresa(String nome, int cnpj, String nomeRua, ArrayList<Funcionario> listaFuncionarios) {
 		this.nome = nome;
 		this.cnpj = cnpj;
 		this.nomeRua = nomeRua;
-		this.listaFuncionarios = listaFuncionarios;
+		this.listaFuncionarios = new ArrayList<>();
 	}
-	
-	//métodos
+
+	// métodos
 	public String getNome() {
 		return nome;
 	}
@@ -58,8 +58,31 @@ public class Empresa {
 	public void setListaFuncionarios(ArrayList<Funcionario> listaFuncionarios) {
 		this.listaFuncionarios = listaFuncionarios;
 	}
+
 	public void acrescentarFuncionario(Funcionario funcionario) {
 		listaFuncionarios.add(funcionario);
 	}
-	
+
+	public void listarFuncionarios() {
+		System.out.println("Funcionarios da empresa " + this.nome + ":");
+		for (Funcionario funcionario : listaFuncionarios) {
+			System.out.println(funcionario);
+		}
+	}
+
+	public void listarFuncionariosComEmpresa() {
+		System.out.println("Funcionarios da empresa " + this.nome + ":");
+		for (Funcionario funcionario : listaFuncionarios) {
+			System.out.println(funcionario.getNome() + ": " + nome);
+		}
+	}
+
+	public void acessarEmpresa(Funcionario funcionario) {
+		System.out.println(funcionario.getNome() + " trabalha na empresa: " + nome);
+	}
+
+	public void imprimirDados(Empresa empresa) {
+		System.out.println("Nome da empresa: " + nome);
+		listarFuncionariosComEmpresa();
+	}
 }

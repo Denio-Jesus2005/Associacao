@@ -12,14 +12,14 @@ public class Professor {
 		this.nome = "";
 		this.idade = 0;
 		this.salario = 0.0; 
-		this.disciplina = new Disciplina();
+		this.disciplina = null;
 	}
 	// construtores com parâmetros
 	public Professor(String nome, int idade, double salario, Disciplina disciplina) {
 		this.nome = nome;
 		this.idade = idade;
 		this.salario = salario;
-		this.disciplina = disciplina;
+		this.disciplina = new Disciplina();
 	}
 	// métodos
 	public String getNome() {

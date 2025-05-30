@@ -58,5 +58,4 @@ public class Funcionario {
 	public void setEmpresa(ArrayList<Empresa> listaEmpresas) {
 		this.listaEmpresas = listaEmpresas;
 	}
-
 }
