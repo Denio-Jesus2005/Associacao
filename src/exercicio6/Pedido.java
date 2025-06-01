@@ -15,11 +15,10 @@ public class Pedido {
 		this.codigoPedido = 0;
 		this.localEntrega = "";
 		this.data = "";
-		this.listaItemPedido = new ArrayList<>();
 	}
 
 	// construtores com parâmetros
-	public Pedido(int codigoPedido, String localEntrega, String data, ArrayList<ItemPedido> listaItemPedido) {
+	public Pedido(int codigoPedido, String localEntrega, String data) {
 		this.codigoPedido = codigoPedido;
 		this.localEntrega = localEntrega;
 		this.data = data;

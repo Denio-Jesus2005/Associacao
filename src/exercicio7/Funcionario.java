@@ -19,7 +19,7 @@ public class Funcionario {
 		this.projetosAssociados = new ArrayList<>();
 	}
 	// construtores com parâmetros
-	public Funcionario(String nome, int idade, double salario, ArrayList<Departamento> listaDepartamentos, ArrayList<Projeto> projetosAssociados) {
+	public Funcionario(String nome, int idade, double salario) {
 		this.nome = nome;
 		this.idade = idade;
 		this.salario = salario;
@@ -57,5 +57,15 @@ public class Funcionario {
 	public void setProjetosAssociados(ArrayList<Projeto> projetosAssociados) {
 		this.projetosAssociados = projetosAssociados;
 	}
-	
+	public void addProjetoAssociado(Projeto projeto) {
+		projetosAssociados.add(projeto);
+	}
+	public void addDepartamento(Departamento departamento) {
+		listaDepartamentos.add(departamento);
+	}
+	public void imprimirProjetos() {
+		for() {
+			
+		}
+	}
 }

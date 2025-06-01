@@ -17,7 +17,7 @@ public class Projeto {
 		this.listaAssociadosAoProjeto = new ArrayList<>();
 	}
 	// construtores com parâmetros
-	public Projeto(String nome, int codigo, String mesInicio, ArrayList<Funcionario> listaAssociadosAoProjeto) {
+	public Projeto(String nome, int codigo, String mesInicio) {
 		this.nome = nome;
 		this.codigo = codigo;
 		this.mesInicio = mesInicio;
@@ -48,5 +48,7 @@ public class Projeto {
 	public void setListaAssociadosAoProjeto(ArrayList<Funcionario> listaAssociadosAoProjeto) {
 		this.listaAssociadosAoProjeto = listaAssociadosAoProjeto;
 	}
-	
+	public void addFuncionarioAssociado(Funcionario funcionario) {
+		listaAssociadosAoProjeto.add(funcionario);
+	}
 }

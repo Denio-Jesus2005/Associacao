@@ -24,7 +24,7 @@ public class Disciplina {
 		this.sala = sala;
 		this.horario = horario;
 		this.listaCursos = listaCursos;
-		this.listaProfessores = listaProfessores;
+		this.listaProfessores = new ArrayList<>();
 	}
 	// métodos
 	public String getNome() {

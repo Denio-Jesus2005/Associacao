@@ -2,7 +2,7 @@ package exercicio10;
 
 import java.util.ArrayList;
 
-public class DisciplinaPresencial {
+public class DisciplinaPresencial extends Disciplina{
 
 	// atributos
 	private String numeroSala;

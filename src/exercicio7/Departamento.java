@@ -17,7 +17,7 @@ public class Departamento {
 		this.listaFuncionarios = new ArrayList<>();
 	}
 	// construtores com parâmetros
-	public Departamento(String nome, int codigo, String local, ArrayList<Funcionario> listaFuncionarios) {
+	public Departamento(String nome, int codigo, String local) {
 		this.nome = nome;
 		this.codigo = codigo;
 		this.local = local;
@@ -48,5 +48,15 @@ public class Departamento {
 	public void setListaFuncionarios(ArrayList<Funcionario> listaFuncionarios) {
 		this.listaFuncionarios = listaFuncionarios;
 	}
-	
+	public void adicionarFuncionario(Funcionario funcionario) {
+		listaFuncionarios.add(funcionario);
+	}
+	public void listarFuncionarios() {
+		System.out.println("Funcionarios do" + nome);
+		for(Funcionario funcionario : listaFuncionarios) {
+			if() {
+			System.out.println(funcionario.getNome());
+			}
+		}
+	}
 }

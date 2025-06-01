@@ -17,7 +17,7 @@ public class Produto {
 		this.listaItemPedido = new ArrayList<>();
 }
 	// construtores com parâmetros
-	public Produto(String nome, double preco, int estoque, ArrayList<ItemPedido> listaItemPedido) {
+	public Produto(String nome, double preco, int estoque) {
 		this.nome = nome;
 		this.preco = preco;
 		this.estoque = estoque;
